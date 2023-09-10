@@ -8,3 +8,10 @@ for (let i = 0; i < 256; i++) {
     div.classList.add("grid");
     container.appendChild(div);
 };
+
+const pixels = document.querySelectorAll(".grid");
+pixels.forEach((pixel) => {
+    pixel.addEventListener("mouseover", (e) => {
+        e.target.classList.add("coloured");
+    })
+});
