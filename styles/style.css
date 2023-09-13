@@ -47,9 +47,11 @@ header h2 {
 	font-size: 6vw;
 }
 
-#resetBtn {
+#buttonsContainer {
+	display: flex;
+}
+#resetButton {
 	padding: 15px;
 	font-size: 3vw;
-	/* margin: 5vw auto; */
 	margin: 5vw auto;
 }
