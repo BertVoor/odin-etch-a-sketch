@@ -1,48 +1,55 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-#container {
-  margin: 5vw auto;
-  width: 50vw;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: lightgray;
+#playGrid {
+	margin: 5vw auto;
+	width: 50vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: lightgray;
 }
 
 .grid {
-  max-width: 50px;
-  max-height: 50px;
-  border: 1px solid gray;
+	max-width: 50px;
+	max-height: 50px;
+	border: 1px solid gray;
 
-  flex: 0 0 6.25%;
-  aspect-ratio: 1 / 1;
+	flex: 0 0 6.25%;
+	aspect-ratio: 1 / 1;
 }
 
 .coloured {
-  background-color: black;
+	background-color: black;
 }
 
 #frame {
-  display: flex;
-  width: 60vw;
-  height: 60vw;
-  background-color: red;
-  border-radius: 15px;
-  margin: 0 auto;
-  box-shadow: 25px 15px 80px black;
+	display: flex;
+	width: 60vw;
+	height: 60vw;
+	background-color: red;
+	border-radius: 15px;
+	margin: 0 auto;
+	box-shadow: 25px 15px 80px black;
 }
 header {
-  text-align: center;
-  margin: 5vw;
+	text-align: center;
+	margin: 5vw;
 }
 header h1 {
-  font-size: 8vw;
+	font-size: 8vw;
 }
 
 header h2 {
-  font-size: 6vw;
+	font-size: 6vw;
+}
+
+#resetBtn {
+	padding: 15px;
+	font-size: 3vw;
+	/* margin: 5vw auto; */
+	margin: 5vw auto;
 }
