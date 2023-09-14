@@ -4,6 +4,10 @@
 	padding: 0;
 }
 
+.container {
+	display: flex;
+	flex-direction: column;
+}
 #playGrid {
 	margin: 5vw auto;
 	width: 50vw;
@@ -13,12 +17,10 @@
 	background-color: lightgray;
 }
 
-.grid {
-	max-width: 50px;
-	max-height: 50px;
+.pixel {
+	/*max-width: 150px;
+	max-height: 150px;*/
 	border: 1px solid gray;
-
-	flex: 0 0 6.25%;
 	aspect-ratio: 1 / 1;
 }
 
@@ -50,7 +52,7 @@ header h2 {
 #buttonsContainer {
 	display: flex;
 }
-#resetButton {
+button {
 	padding: 15px;
 	font-size: 3vw;
 	margin: 5vw auto;

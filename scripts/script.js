@@ -1,24 +1,52 @@
 console.log("script loaded");
 
+const head = document.querySelector("head");
 const playGrid = document.querySelector("#playGrid");
+const sizeButton = document.querySelector("#sizeButton");
+const resetButton = document.querySelector("#resetButton");
+let gridSize = 10;
 
-for (let i = 0; i < 256; i++) {
-	const div = document.createElement("div");
-	div.classList.add("grid");
-	playGrid.appendChild(div);
-}
+const styleElement = document.createElement("style");
+styleElement.id = "flexStyle";
+head.appendChild(styleElement);
 
-const pixels = document.querySelectorAll(".grid");
-pixels.forEach((pixel) => {
-	pixel.addEventListener("mouseover", (e) => {
-		e.target.classList.add("coloured");
-	});
+drawGrid();
+
+sizeButton.addEventListener("click", () => {
+	gridSize = Number(prompt("Please set a size:"));
+	drawGrid();
 });
 
-const resetButton = document.querySelector("#resetButton");
+function drawGrid() {
+	const existingPixels = document.querySelectorAll(".pixel");
+	existingPixels.forEach((pixel) => {
+		pixel.remove();
+	});
+
+	for (let i = 0; i < gridSize * gridSize; i++) {
+		const div = document.createElement("div");
+		div.classList.add("pixel");
+		playGrid.appendChild(div);
+	}
+	setFlexStyle();
+	setMouseover();
+}
+
+function setFlexStyle() {
+	const flexStyle = document.querySelector("#flexStyle");
+	flexStyle.innerHTML = `.pixel {flex: 1 1 ${100 / gridSize}%}`;
+}
+
+function setMouseover() {
+	document.querySelectorAll(".pixel").forEach((pixel) => {
+		pixel.addEventListener("mouseover", (e) => {
+			e.target.classList.add("coloured");
+		});
+	});
+}
 
 resetButton.addEventListener("click", () => {
-	pixels.forEach((pixel) => {
+	document.querySelectorAll(".pixel").forEach((pixel) => {
 		pixel.classList.remove("coloured");
 	});
 });
