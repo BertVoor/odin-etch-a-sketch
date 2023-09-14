@@ -13,7 +13,7 @@ head.appendChild(styleElement);
 drawGrid();
 
 sizeButton.addEventListener("click", () => {
-	gridSize = Number(prompt("Please set a size:"));
+	gridSize = Number(prompt("Please set the number of squares per side:"));
 	drawGrid();
 });
 
