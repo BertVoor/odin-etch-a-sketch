@@ -18,8 +18,6 @@
 }
 
 .pixel {
-	/*max-width: 150px;
-	max-height: 150px;*/
 	border: 1px solid gray;
 	aspect-ratio: 1 / 1;
 }
